@@ -1,0 +1,83 @@
+---
+layout: default
+title: About
+---
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Do Thi Minh Tram</h1>
+    <p class="tagline">Computer Science student · Rīga Technical University</p>
+    <p class="bio">
+      I'm a final-year CS student at RTU, Latvia, interested in medical image analysis,
+      deep learning, and transfer learning for healthcare applications.
+      My thesis explores multispectral skin lesion classification using multimodal neural networks.
+    </p>
+    <p class="bio">
+      Currently preparing for a summer research program at Özyeğin University, Istanbul.
+      I also have an accepted paper at <a href="#">ENASE 2026</a>.
+    </p>
+    <div class="links">
+      <a href="https://github.com/Tramdanglamduoc" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/" target="_blank">LinkedIn</a>
+      <a href="mailto:your@email.com">Email</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <img src="/assets/profile.jpg" alt="Tram's photo">
+  </div>
+</section>
+
+<section class="section">
+  <h2>Research interests</h2>
+  <ul class="interest-list">
+    <li>Medical image analysis & skin lesion classification</li>
+    <li>Transfer learning & multistage pretraining</li>
+    <li>Multimodal deep learning architectures</li>
+    <li>Federated learning for healthcare</li>
+    <li>HPC & large-scale data pipelines</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>Timeline</h2>
+  <div class="timeline">
+    <div class="tl-item">
+      <span class="tl-year">2026</span>
+      <span class="tl-desc">Paper accepted at ENASE 2026 · Summer research at Özyeğin University, Istanbul</span>
+    </div>
+    <div class="tl-item">
+      <span class="tl-year">2025–26</span>
+      <span class="tl-desc">Bachelor's thesis on multispectral skin imaging with deep learning, RTU</span>
+    </div>
+    <div class="tl-item">
+      <span class="tl-year">2023</span>
+      <span class="tl-desc">Started BSc in Computer Science at Rīga Technical University, Latvia</span>
+    </div>
+    <div class="tl-item">
+      <span class="tl-year">2003</span>
+      <span class="tl-desc">Born in Vietnam</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>I ♥</h2>
+  <p class="love-text">
+    Deep learning, medical AI, astrology & numerology, music, exploring new cities,
+    Vietnamese food, and finding patterns in unexpected places.
+  </p>
+</section>
+
+<section class="section">
+  <h2>Recent posts</h2>
+  <div class="post-list">
+    {% for post in site.posts limit:3 %}
+    <div class="post-item">
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
+    </div>
+    {% else %}
+    <p class="empty">No posts yet — coming soon.</p>
+    {% endfor %}
+  </div>
+</section>

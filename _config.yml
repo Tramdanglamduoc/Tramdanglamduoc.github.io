@@ -1,0 +1,8 @@
+title: "Trâm Trần"
+description: "CS student at RTU · Medical image analysis · Deep learning"
+author: "Trần Ngọc Bảo Trâm"
+url: "https://tramdanglamduoc.github.io"
+permalink: /posts/:title/
+
+plugins:
+  - jekyll-feed

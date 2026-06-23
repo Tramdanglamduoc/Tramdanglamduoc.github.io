@@ -1,0 +1,250 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #faf9f7;
+  --text: #1a1a1a;
+  --muted: #6b6b6b;
+  --accent: #2d5a8e;
+  --border: #e5e2dc;
+  --serif: 'Lora', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+}
+
+html { font-size: 16px; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-weight: 400;
+  line-height: 1.7;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Nav */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0 2.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 3rem;
+}
+
+.nav-name {
+  font-family: var(--serif);
+  font-size: 1rem;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.15s;
+}
+
+.nav-links a:hover { color: var(--text); }
+
+/* Hero */
+.hero {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  margin-bottom: 3.5rem;
+}
+
+.hero-text { flex: 1; }
+
+h1 {
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 0.4rem;
+}
+
+.tagline {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+}
+
+.bio {
+  font-size: 0.95rem;
+  color: #3a3a3a;
+  margin-bottom: 0.8rem;
+}
+
+.bio a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.4rem;
+  flex-wrap: wrap;
+}
+
+.links a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 1px;
+  transition: opacity 0.15s;
+}
+
+.links a:hover { opacity: 0.7; }
+
+.hero-photo {
+  flex-shrink: 0;
+  width: 130px;
+}
+
+.hero-photo img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: grayscale(15%);
+  border: 1px solid var(--border);
+}
+
+/* Sections */
+.section {
+  margin-bottom: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+h2 {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--muted);
+  margin-bottom: 1.2rem;
+}
+
+/* Interests */
+.interest-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.interest-list li {
+  font-size: 0.93rem;
+  padding-left: 1rem;
+  position: relative;
+  color: #3a3a3a;
+}
+
+.interest-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--border);
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tl-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 1rem;
+  font-size: 0.93rem;
+}
+
+.tl-year {
+  color: var(--muted);
+  font-size: 0.85rem;
+  padding-top: 0.05rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.tl-desc { color: #3a3a3a; }
+
+/* I love */
+.love-text {
+  font-size: 0.93rem;
+  color: #3a3a3a;
+  line-height: 1.8;
+}
+
+/* Posts */
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.post-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  font-size: 0.93rem;
+}
+
+.post-item a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  transition: border-color 0.15s;
+}
+
+.post-item a:hover { border-color: var(--text); }
+
+.post-date {
+  color: var(--muted);
+  font-size: 0.83rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.empty {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+  margin-top: 3rem;
+  color: var(--muted);
+  font-size: 0.83rem;
+}
+
+/* Mobile */
+@media (max-width: 540px) {
+  .hero { flex-direction: column-reverse; gap: 1.5rem; }
+  .hero-photo { width: 90px; }
+  .hero-photo img { width: 90px; height: 90px; }
+  h1 { font-size: 1.6rem; }
+  .tl-item { grid-template-columns: 65px 1fr; }
+}
