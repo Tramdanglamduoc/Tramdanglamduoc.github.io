@@ -1,0 +1,16 @@
+- name: Federated-Learning-in-Brain-Tumor-Classification
+  url: https://github.com/Tramdanglamduoc/Federated-Learning-in-Brain-Tumor-Classification
+  stack: PyTorch · Jupyter
+  description: Traditional vs. hierarchical federated learning for 44-class brain tumor MRI, with notebooks, results, report and slides.
+- name: BCI-I-IDUN-EEG-Analysis-Challenge
+  url: https://github.com/Tramdanglamduoc/BCI-I-IDUN-EEG-Analysis-Challenge
+  stack: PyTorch · Jupyter
+  description: A 1D CNN for in-ear EEG with leave-one-subject-out validation, a data download script and documented limitations.
+- name: EHR
+  url: https://github.com/Tramdanglamduoc/EHR
+  stack: HTML · CSS · JavaScript
+  description: A multilingual personal health record that runs entirely in the browser, with on-device translation.
+- name: Tramdanglamduoc.github.io
+  url: https://github.com/Tramdanglamduoc/Tramdanglamduoc.github.io
+  stack: Jekyll · GitHub Pages
+  description: The source of this website.

@@ -1,0 +1,58 @@
+- title: TissueSense
+  context: Özyeğin University, Istanbul · Summer 2026
+  problem: Robotic surgery takes away the surgeon's sense of touch, so it is hard to know how much force a tool puts on tissue.
+  method: A web-based surgical simulator built on viscoelastic tissue models (Kelvin–Voigt, Maxwell) for liver, kidney and spleen across six laparoscopic instruments, with bootstrap uncertainty, sensitivity analysis and an audio preview of haptic feedback.
+  result: An interactive tool for estimating tool–tissue forces, developed for research on physics-informed AI for haptic feedback in simulated robotic surgery.
+  tags: [Surgical AI, Physics-informed modeling, Simulation]
+
+- title: Segmentation for AI-assisted gynecologic laparoscopy
+  context: Project · 2026
+  problem: In laparoscopic video, instruments and anatomy overlap and move constantly, which makes automated assistance hard.
+  method: A segmentation pipeline for surgical instruments and anatomy on the GynSurg dataset.
+  result: In progress.
+  tags: [Surgical AI, Computer vision]
+
+- title: Multispectral skin lesion diagnosis with limited data
+  context: Bachelor's thesis, Riga Technical University · 2025–2026
+  problem: Multispectral skin imaging carries richer information than ordinary photos, but its datasets are too small to train deep models from scratch.
+  method: Multistage transfer learning (ImageNet → HAM10000 → multispectral) and a multimodal network that fuses images with clinical metadata, evaluated with 5-fold stratified group cross-validation.
+  result: Compared multimodal and image-only models and HAM10000- vs. ImageNet-only pretraining on a proprietary multispectral dataset. Graded 9/10.
+  tags: [Medical imaging, Transfer learning, Multimodal learning]
+
+- title: Federated learning for brain tumor classification
+  context: MaSSP Data Science 2024 · Team project
+  problem: Brain MRI models need diverse data, but hospitals can't pool patient scans because of privacy rules.
+  method: ResNet-50 trained with traditional and hierarchical federated learning (FedAvg, 20 clients, 5 edge servers) on 44-class MRI data, compared with centralized training.
+  result: Federated models came within 0.5 points of centralized accuracy (88.91% vs. 89.35%), and hierarchical FL reached 80% validation accuracy in about 6 rounds instead of 9.
+  tags: [Neuro, Federated learning, Privacy]
+  links:
+    - label: Code
+      url: https://github.com/Tramdanglamduoc/Federated-Learning-in-Brain-Tumor-Classification
+
+- title: Decoding in-ear EEG across people
+  context: BCI-I × IDUN EEG Analysis Challenge
+  problem: EEG differs a lot from person to person, so a model has to work on someone it has never seen.
+  method: A 1D CNN with signal augmentation on single-channel in-ear EEG, validated leave-one-subject-out and ensembled across folds.
+  result: Mean weighted F1 of 0.454 and balanced accuracy of 0.280 on unseen subjects, against 0.143 chance for 7 classes.
+  tags: [Neuro, EEG, Brain–computer interfaces]
+  links:
+    - label: Code
+      url: https://github.com/Tramdanglamduoc/BCI-I-IDUN-EEG-Analysis-Challenge
+
+- title: Knowledge retrieval for biomedical literature
+  context: TEEP, Taipei Medical University · 2026 –
+  problem: Important findings are scattered across thousands of papers, and researchers can't read them all.
+  method: Automated paper retrieval, knowledge graphs and retrieval-augmented generation (RAG).
+  result: Ongoing. Details will be shared when the work is published.
+  tags: [Knowledge graphs, RAG, Literature mining]
+
+- title: Multilingual personal health record
+  context: Personal project · 2026
+  problem: Health records rarely travel well across languages and countries.
+  method: A static web app in six languages with on-device translation; data stays in the browser's local storage.
+  result: A working tool anyone can open in a browser, with no server and no account.
+  tags: [Health informatics, Web]
+  links:
+    - label: Code
+      url: https://github.com/Tramdanglamduoc/EHR
+

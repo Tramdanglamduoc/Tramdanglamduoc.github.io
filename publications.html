@@ -1,0 +1,27 @@
+---
+layout: default
+title: Publications
+eyebrow: Papers & reports
+permalink: /publications/
+---
+
+<ul class="simple-list">
+{% for p in site.data.publications.selected %}
+  <li>
+    <span class="when">{{ p.year }}</span>
+    <span class="what">
+      {% if p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}
+      <em>{{ p.venue }}</em>
+      {% if p.note %}<em>{{ p.note }}</em>{% endif %}
+    </span>
+  </li>
+{% endfor %}
+</ul>
+
+<h2>Earlier research</h2>
+<p class="muted">Before computer science, I started in the wet lab: nanomaterials for medical heating and imaging, and a behavioral therapy study.</p>
+<ul class="simple-list">
+{% for p in site.data.publications.earlier %}
+  <li><span class="when">{{ p.year }}</span><span class="what">{{ p.title }}<em>{{ p.venue }}</em></span></li>
+{% endfor %}
+</ul>

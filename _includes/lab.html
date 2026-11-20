@@ -1,0 +1,15 @@
+<div class="lab">
+  <img src="/assets/img/lab.webp" alt="An isometric research lab with platforms for each part of this site" width="1800" height="1385">
+  <svg class="lab-hits" viewBox="0 0 1000 769" aria-hidden="true">
+    {% for s in site.data.stations %}{% if s.points %}
+    <a href="{{ s.url }}" tabindex="-1"><polygon points="{{ s.points }}"/></a>
+    {% endif %}{% endfor %}
+  </svg>
+  {% for s in site.data.stations %}
+  <a class="station{% if s.coffee %} station-coffee{% endif %}" href="{{ s.url }}" style="left: {{ s.label_x }}%; top: {{ s.label_y }}%;">
+    {% if s.coffee %}<span class="cup" aria-hidden="true">☕</span>{% endif %}
+    <span class="station-name">{{ s.name }}</span>
+    <span class="station-blurb">{{ s.blurb }}</span>
+  </a>
+  {% endfor %}
+</div>

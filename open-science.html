@@ -1,0 +1,17 @@
+---
+layout: default
+title: Open Science
+eyebrow: Code & tools I share
+lede: "Good tools shouldn't belong only to well-funded labs. Here is the code I've made public, with READMEs written so others can rerun it."
+permalink: /open-science/
+---
+
+{% for r in site.data.repos %}
+<article class="card">
+  <h3><a href="{{ r.url }}">{{ r.name }}</a></h3>
+  <p class="meta">{{ r.stack }}</p>
+  <p>{{ r.description }}</p>
+</article>
+{% endfor %}
+
+<p class="muted" style="margin-top: 2rem">More on <a href="https://github.com/{{ site.github }}">GitHub</a>.</p>
