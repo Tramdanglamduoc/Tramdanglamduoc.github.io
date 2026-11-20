@@ -27,7 +27,7 @@
   <main class="wrap">
     {% if page.title %}
     <header class="page-head">
-      <p class="eyebrow">{{ page.eyebrow }}</p>
+      {% if page.eyebrow %}<p class="eyebrow">{{ page.eyebrow }}</p>{% endif %}
       <h1>{{ page.title }}</h1>
       {% if page.lede %}<p class="lede">{{ page.lede }}</p>{% endif %}
     </header>
@@ -36,7 +36,8 @@
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 {{ site.author }} · <a href="mailto:{{ site.email }}">{{ site.email }}</a> · <a href="https://github.com/{{ site.github }}">GitHub</a> · <a href="{{ site.linkedin }}">LinkedIn</a></p>
+    <p>© 2026 {{ site.author }}</p>
+    {% include social.html %}
     <p class="credit">Lab illustrations by macrovector on Freepik.</p>
   </footer>
 </body>

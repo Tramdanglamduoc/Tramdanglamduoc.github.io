@@ -1,38 +1,36 @@
-# One entry per lab platform. Order here is the order of the navbar tabs.
-# label_x / label_y are percentages of the lab image; points are in its 1000x769 viewBox.
+# One entry per station. Order here is the order of the navbar tabs.
+# label_x / label_y are percentages of the lab image; points (optional) outline a whole platform
+# in the image's 1000x769 viewBox and are only used when one platform holds one station.
 - name: About Me
   url: /about/
-  blurb: My story so far
-  label_x: 21
-  label_y: 47
+  label_x: 17
+  label_y: 50
   points: "25,298 215,195 415,295 240,410"
 - name: Projects
   url: /projects/
-  blurb: What I build
   label_x: 55
   label_y: 34
   points: "345,175 545,60 755,180 555,300"
 - name: Publications
   url: /publications/
-  blurb: Papers & reports
   label_x: 64
   label_y: 91
   points: "495,678 645,585 780,645 625,750"
-- name: Talks & Media
+- name: Talks & Workshops
   url: /talks/
-  blurb: Schools, talks, community
   label_x: 77
   label_y: 63
   points: "535,415 770,290 970,400 735,535"
+# These three share the bottom-left platform: server rack, test-tube rack, person coding.
 - name: Open Science
   url: /open-science/
-  blurb: Code & tools I share
-  label_x: 30
-  label_y: 86
-  points: "85,585 300,465 535,560 290,705"
-- name: Book a Chat
-  url: /contact/
-  blurb: Let's talk
-  label_x: 88
-  label_y: 12
-  coffee: true
+  label_x: 14
+  label_y: 63
+- name: Illustrations
+  url: /illustrations/
+  label_x: 23
+  label_y: 88
+- name: Media
+  url: /media/
+  label_x: 46
+  label_y: 73

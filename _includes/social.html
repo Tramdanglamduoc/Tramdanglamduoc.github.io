@@ -1,0 +1,8 @@
+<p class="social">
+  <a href="mailto:{{ site.email }}">Email</a>
+  <a href="https://github.com/{{ site.github }}">GitHub</a>
+  <a href="{{ site.linkedin }}">LinkedIn</a>
+  {% if site.orcid != "" %}<a href="https://orcid.org/{{ site.orcid }}">ORCID</a>{% endif %}
+  {% if site.instagram != "" %}<a href="https://www.instagram.com/{{ site.instagram }}/">Instagram</a>{% endif %}
+  {% if site.cv != "" %}<a href="{{ site.cv }}">CV</a>{% endif %}
+</p>

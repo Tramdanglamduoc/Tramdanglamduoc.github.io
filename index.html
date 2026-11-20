@@ -4,16 +4,10 @@ layout: default
 
 <section class="hero">
   <div class="hero-text">
-    <p class="eyebrow">Computer Systems → Biomedical Engineering</p>
+    <p class="greeting">Welcome to my website!</p>
     <h1 class="name">Trần Ngọc Bảo Trâm</h1>
-    <p class="tagline">I build AI and simulation tools for medicine, and I'm moving toward engineering systems that work with the human brain.</p>
-    <p class="places">Studied and worked in Vietnam · Latvia · Cyprus · Türkiye · Taiwan</p>
-    <p class="hero-links">
-      <a href="mailto:{{ site.email }}">Email</a>
-      <a href="https://github.com/{{ site.github }}">GitHub</a>
-      <a href="{{ site.linkedin }}">LinkedIn</a>
-      {% if site.cv != "" %}<a href="{{ site.cv }}">CV</a>{% endif %}
-    </p>
+    <p class="tagline">My name can be a bit of a tongue-twister, so feel free to call me <strong>Tammie</strong>.</p>
+    {% include social.html %}
   </div>
   <figure class="portrait">
     <img src="/assets/img/portrait.jpeg" alt="Portrait of Trần Ngọc Bảo Trâm" width="1204" height="1600">
@@ -42,24 +36,6 @@ layout: default
 
 <section class="lab-section">
   <h2>Step into the lab</h2>
-  <p class="muted">Each platform is a part of this site. Click one to walk in.</p>
+  <p class="muted">Each part of the lab is a part of this site. Click one to walk in.</p>
   {% include lab.html %}
-</section>
-
-<section class="now">
-  <h2>Now</h2>
-  <ul class="now-list">
-    {% for item in site.data.now %}
-    <li><span class="when">{{ item.when }}</span><span>{{ item.what }}</span></li>
-    {% endfor %}
-  </ul>
-</section>
-
-<section class="news">
-  <h2>Recent news</h2>
-  <ul class="news-list">
-    {% for item in site.data.news limit: 5 %}
-    <li><span class="when">{{ item.date }}</span><span>{{ item.text }}</span></li>
-    {% endfor %}
-  </ul>
 </section>

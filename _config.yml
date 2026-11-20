@@ -1,15 +1,16 @@
 title: "Trần Ngọc Bảo Trâm"
-short_name: "Tram Tran"
+short_name: "Tammie Tran"
 description: "Computer Systems graduate moving into biomedical engineering. AI for medicine, neuroengineering, and open tools for research."
 author: "Trần Ngọc Bảo Trâm"
 url: "https://tramdanglamduoc.github.io"
 email: "tnbtram180@gmail.com"
 github: "Tramdanglamduoc"
 linkedin: "https://www.linkedin.com/in/ngoc-bao-tram-tran-7b104b2a2/"
+# Just the ID / username, e.g. orcid: "0000-0002-1825-0097", instagram: "yourname". Links stay hidden while empty.
+orcid: ""
+instagram: ""
 # Set to e.g. /assets/cv.pdf once the updated CV is uploaded; the link stays hidden until then.
 cv: ""
-# Paste your Calendly or Cal.com link here; the Book a chat page falls back to email while it's empty.
-booking_url: ""
 
 exclude:
   - README.md
