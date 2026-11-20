@@ -1,0 +1,29 @@
+selected:
+  - year: 2026
+    title: An Industrial Evaluation of MDDOAI Framework for Automated CI/CD Pipeline Generation
+    venue: Proceedings of ENASE 2026 (conference paper)
+    note: Evaluates generating GitLab CI/CD pipelines from software architecture models in a multi-project industrial setting.
+  - year: 2026
+    title: "Software Architecture Models and Model-Driven Transformations: A Systematic Literature Review"
+    venue: Under review
+  - year: 2026
+    title: Using Large-Scale Datasets To Enhance Diagnosis In Limited Multi-Spectral Skin Imaging
+    venue: Bachelor's thesis, Riga Technical University (grade 9/10)
+  - year: 2024
+    title: Performance Evaluation of Federated Learning Techniques in Brain Tumor Classification
+    venue: Technical report, MaSSP Data Science 2024
+    url: https://github.com/Tramdanglamduoc/Federated-Learning-in-Brain-Tumor-Classification/blob/Main/docs/report.pdf
+
+earlier:
+  - year: 2024
+    title: IoT Security Challenges and Solutions
+    venue: Review paper
+  - year: 2023
+    title: Synthesis of Fe₂O₃ Nanoparticles to Be Used in Non-Contact Heating in Clinical Applications
+    venue: Student research paper
+  - year: 2023
+    title: Fabrication of Silver Nanoparticles for Melamine Detection in Milk
+    venue: Student research paper
+  - year: 2022
+    title: Memory Reconsolidation Behavior Therapy Method for Patients with Chronic Stress, Anxiety Disorders, and Phobias
+    venue: Student research paper

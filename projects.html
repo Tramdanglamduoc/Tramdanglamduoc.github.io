@@ -1,0 +1,26 @@
+---
+layout: default
+title: Projects
+lede: "Most of my work circles one question: how can medical AI stay useful when data is scarce, private, or expensive? Each project below reads as problem → method → result."
+permalink: /projects/
+---
+
+{% for p in site.data.projects %}
+<article class="card">
+  <h3>{{ p.title }}</h3>
+  <p class="meta">{{ p.context }}</p>
+  <dl class="pmr">
+    <div><dt>Problem</dt><dd>{{ p.problem }}</dd></div>
+    <div><dt>Method</dt><dd>{{ p.method }}</dd></div>
+    <div><dt>Result</dt><dd>{{ p.result }}</dd></div>
+  </dl>
+  <ul class="tags">{% for t in p.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+  {% if p.links %}<p class="links">{% for l in p.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}</p>{% endif %}
+</article>
+{% endfor %}
+
+<h2>Earlier engineering projects</h2>
+<ul class="simple-list">
+  <li><span class="when">2022 –</span><span class="what">Thuốc, co-founder. A medication-information app; I lead the image-recognition work for identifying drug names and brands.</span></li>
+  <li><span class="when">2023</span><span class="what">Home-based automatic medication dispenser. Co-designed in SolidWorks and AutoCAD and programmed on Arduino Cloud.</span></li>
+</ul>

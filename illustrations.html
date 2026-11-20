@@ -1,0 +1,19 @@
+---
+layout: default
+title: Illustrations
+lede: "I draw, too. Some of it is science, some of it is just for fun."
+permalink: /illustrations/
+---
+
+{% if site.data.illustrations and site.data.illustrations.size > 0 %}
+<div class="gallery">
+  {% for art in site.data.illustrations %}
+  <figure>
+    <img src="{{ art.image }}" alt="{{ art.title }}" loading="lazy">
+    <figcaption>{{ art.title }}{% if art.year %} · {{ art.year }}{% endif %}</figcaption>
+  </figure>
+  {% endfor %}
+</div>
+{% else %}
+<p class="muted">The gallery is on its way.</p>
+{% endif %}

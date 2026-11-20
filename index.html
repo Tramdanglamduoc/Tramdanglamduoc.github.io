@@ -1,83 +1,41 @@
 ---
 layout: default
-title: About
 ---
 
 <section class="hero">
   <div class="hero-text">
-    <h1>Trần Ngọc Bảo Trâm</h1>
-    <p class="tagline">Computer Systems student · Rīga Technical University</p>
-    <p class="bio">
-      I'm a final-year CS student at RTU, Latvia, interested in medical image analysis,
-      deep learning, and transfer learning for healthcare applications.
-      My thesis explores multispectral skin lesion classification using multimodal neural networks.
-    </p>
-    <p class="bio">
-      Currently preparing for a summer research program at Özyeğin University, Istanbul.
-      I also have an accepted paper at <a href="#">ENASE 2026</a>.
-    </p>
-    <div class="links">
-      <a href="https://github.com/Tramdanglamduoc" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/ngoc-bao-tram-tran-7b104b2a2/" target="_blank">LinkedIn</a>
-      <a href="mailto:tnbtram180@gmail.com">Email</a>
-    </div>
+    <p class="greeting">Welcome to my website!</p>
+    <h1 class="name">Trần Ngọc Bảo Trâm</h1>
+    <p class="tagline">My name can be a bit of a tongue-twister, so feel free to call me <strong>Tammie</strong>.</p>
+    {% include social.html %}
   </div>
-  <div class="hero-photo">
-    <img src="/assets/Full Avatar.jpeg" alt="Tram's photo">
-  </div>
+  <figure class="portrait">
+    <img src="/assets/img/portrait.jpeg" alt="Portrait of Trần Ngọc Bảo Trâm" width="1204" height="1600">
+  </figure>
 </section>
 
-<section class="section">
-  <h2>Research interests</h2>
-  <ul class="interest-list">
-    <li>Medical image analysis & skin lesion classification</li>
-    <li>Transfer learning & multistage pretraining</li>
-    <li>Multimodal deep learning architectures</li>
-    <li>Federated learning for healthcare</li>
-    <li>HPC & large-scale data pipelines</li>
+<section class="bio">
+  <p>I've always been fascinated by systems: how simple parts, connected the right way, give rise to behavior that looks like intelligence. I studied Computer Systems to understand how machines are built from the ground up, from hardware, software, and networks to the logic that holds them together. Along the way, I realized that the most intricate system I could ever hope to study isn't a machine at all. It's the human body.</p>
+  <p>Biomedicine sits where computation, physics, biology, and clinical practice meet. There, a well-designed model can change how a surgeon feels tissue through a robotic arm, or help a researcher find the one paper that matters among thousands. Biomedical engineering is where all of these come together into something you can build, and it is the field I'm now moving into.</p>
+  <p>Today, I work at the intersection of artificial intelligence, medicine, and open knowledge. I build simulation tools, data pipelines, and retrieval systems that help clinicians and researchers see further. Step by step, I'm moving from writing software about the body to engineering systems that work directly with it: sensors, devices, and living tissue. The system I keep coming back to is the human brain: how it senses, signals, and heals, and how engineering can step in when something goes wrong.</p>
+  <p>I believe good tools shouldn't belong only to well-funded labs. I hope to carry that belief through a master's and PhD in biomedical engineering and, one day, into a company that turns research into care people can actually reach. For now, my main work is <strong>learning to build intelligent systems that serve the most complex system of all: us.</strong></p>
+</section>
+
+<section class="exploring">
+  <h2 class="label">Currently exploring</h2>
+  <ul class="chips">
+    <li>Brain–computer interfaces</li>
+    <li>Neuroengineering</li>
+    <li>Neural implants &amp; prosthetics</li>
+    <li>Biosensors &amp; bioelectronics</li>
+    <li>Tissue engineering</li>
+    <li>Cellular engineering</li>
+    <li>Synthetic biology</li>
   </ul>
 </section>
 
-<section class="section">
-  <h2>Timeline</h2>
-  <div class="timeline">
-    <div class="tl-item">
-      <span class="tl-year">2026</span>
-      <span class="tl-desc">Paper accepted at ENASE 2026 · Summer research at Özyeğin University, Istanbul</span>
-    </div>
-    <div class="tl-item">
-      <span class="tl-year">2025–26</span>
-      <span class="tl-desc">Bachelor's thesis on multispectral skin imaging with deep learning, RTU</span>
-    </div>
-    <div class="tl-item">
-      <span class="tl-year">2023</span>
-      <span class="tl-desc">Started BSc in Computer Systems at Rīga Technical University, Latvia</span>
-    </div>
-    <div class="tl-item">
-      <span class="tl-year">2003</span>
-      <span class="tl-desc">Born in Vietnam</span>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <h2>I ♥</h2>
-  <p class="love-text">
-    Deep learning, medical AI, astrology & numerology, music, exploring new cities,
-    Vietnamese food, and finding patterns in unexpected places.
-  </p>
-</section>
-
-<section class="section">
-  <h2>Recent posts</h2>
-  <div class="post-list">
-    {% for post in site.posts limit:3 %}
-    <div class="post-item">
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
-    </div>
-    {% else %}
-    <p class="empty">No posts yet — coming soon.</p>
-    {% endfor %}
-  </div>
+<section class="lab-section">
+  <h2>Step into the lab</h2>
+  <p class="muted">Each part of the lab is a part of this site. Click one to walk in.</p>
+  {% include lab.html %}
 </section>
