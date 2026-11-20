@@ -39,3 +39,42 @@ layout: default
   <p class="muted">Each part of the lab is a part of this site. Click one to walk in.</p>
   {% include lab.html %}
 </section>
+
+<section class="projects-section">
+  <h2>Projects on GitHub</h2>
+  <p class="muted">Pulled live from the GitHub API, so it's always up to date.</p>
+  <ul id="repo-list" class="repo-list">
+    <li class="muted">Loading...</li>
+  </ul>
+</section>
+
+<script>
+  fetch("https://api.github.com/users/Tramdanglamduoc/repos?sort=updated&per_page=12")
+    .then(res => res.json())
+    .then(repos => {
+      const list = document.getElementById("repo-list");
+      list.innerHTML = "";
+      repos
+        .filter(r => !r.fork && r.name !== "Tramdanglamduoc.github.io")
+        .forEach(r => {
+          const li = document.createElement("li");
+          const link = document.createElement("a");
+          link.href = r.html_url;
+          link.target = "_blank";
+          link.rel = "noopener";
+          link.textContent = r.name;
+          li.appendChild(link);
+          if (r.description) {
+            const desc = document.createElement("span");
+            desc.className = "muted";
+            desc.textContent = " — " + r.description;
+            li.appendChild(desc);
+          }
+          list.appendChild(li);
+        });
+    })
+    .catch(() => {
+      document.getElementById("repo-list").innerHTML =
+        '<li class="muted">Could not load projects right now.</li>';
+    });
+</script>
