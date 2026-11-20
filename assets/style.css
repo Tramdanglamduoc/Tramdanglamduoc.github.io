@@ -156,13 +156,27 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .lab-hits { position: absolute; inset: 0; width: 100%; height: 100%; }
-.lab-hits polygon { fill: transparent; stroke: transparent; stroke-width: 3; transition: fill .2s, stroke .2s; }
-.lab-hits a:hover polygon { fill: rgba(255, 255, 255, .35); stroke: var(--blue); }
+.lab-hits polygon { fill: transparent; cursor: pointer; }
+.lab-hits a:focus { outline: none; }
+
+.lab-glow {
+  position: absolute;
+  height: auto;
+  pointer-events: none;
+  opacity: 0;
+  filter:
+    drop-shadow(0 0 2px #fff)
+    drop-shadow(0 0 7px rgba(124, 196, 242, .95))
+    drop-shadow(0 0 16px rgba(37, 99, 235, .55))
+    brightness(1.06);
+  transition: opacity .25s ease;
+}
 
 .station {
   position: absolute;
-  transform: translate(-50%, -50%);
-  padding: .4rem .8rem;
+  top: max(var(--top), 2.8rem);
+  transform: translate(-50%, calc(-100% - 10px));
+  padding: .35rem .75rem;
   background: var(--paper);
   border: 1px solid var(--ink);
   border-radius: 6px;
@@ -171,13 +185,15 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 1.05rem;
   line-height: 1.25;
   white-space: nowrap;
+  pointer-events: none;
   box-shadow: 3px 3px 0 var(--ink);
-  transition: transform .15s, box-shadow .15s;
+  opacity: 0;
+  transition: opacity .2s ease;
 }
-.station:hover {
-  text-decoration: none;
-  transform: translate(calc(-50% - 2px), calc(-50% - 2px));
-  box-shadow: 5px 5px 0 var(--blue);
+
+/* Phones and tablets have no hover, so their labels stay visible. */
+@media (hover: none) {
+  .station { opacity: 1; top: var(--cy); transform: translate(-50%, -50%); }
 }
 
 /* cards (projects, publications, repos) */
@@ -242,8 +258,7 @@ img { max-width: 100%; height: auto; display: block; }
   .hero { grid-template-columns: 1fr; gap: 1.8rem; }
   .portrait { order: -1; max-width: 220px; }
   .lab { border-radius: 0; }
-  .station { padding: .3rem .45rem; font-size: .72rem; box-shadow: 2px 2px 0 var(--ink); }
-  .station::after { content: ""; position: absolute; inset: -8px; }
+  .station { padding: .2rem .4rem; font-size: .68rem; box-shadow: 2px 2px 0 var(--ink); }
   .simple-list li { grid-template-columns: 1fr; gap: .1rem; }
   .pmr div { grid-template-columns: 1fr; gap: 0; }
   .pmr dt { padding-top: 0; }

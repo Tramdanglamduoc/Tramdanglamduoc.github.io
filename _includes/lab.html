@@ -1,11 +1,19 @@
 <div class="lab">
   <img src="/assets/img/lab.webp" alt="An isometric research lab where each object leads to a part of this site" width="1800" height="1385">
-  <svg class="lab-hits" viewBox="0 0 1000 769" aria-hidden="true">
-    {% for s in site.data.stations %}{% if s.points %}
-    <a href="{{ s.url }}" tabindex="-1"><polygon points="{{ s.points }}"/></a>
-    {% endif %}{% endfor %}
+  {% for s in site.data.stations %}
+  <img class="lab-glow" data-station="{{ s.slug }}" src="/assets/img/lab/{{ s.slug }}.webp" alt="" style="left: {{ s.left }}%; top: {{ s.top }}%; width: {{ s.width }}%;">
+  {% endfor %}
+  <svg class="lab-hits" viewBox="0 0 650 500">
+    {% for s in site.data.stations %}
+    <a href="{{ s.url }}" data-station="{{ s.slug }}" aria-label="{{ s.name }}"><polygon points="{{ s.hull }}"/></a>
+    {% endfor %}
   </svg>
   {% for s in site.data.stations %}
-  <a class="station" href="{{ s.url }}" style="left: {{ s.label_x }}%; top: {{ s.label_y }}%;">{{ s.name }}</a>
+  <span class="station" data-station="{{ s.slug }}" style="left: {{ s.label_x }}%; --top: {{ s.label_y }}%; --cy: {{ s.label_cy }}%;" aria-hidden="true">{{ s.name }}</span>
   {% endfor %}
 </div>
+<style>
+  {% for s in site.data.stations %}
+  .lab:has(a[data-station="{{ s.slug }}"]:is(:hover, :focus-visible)) [data-station="{{ s.slug }}"]{% if forloop.last %}{% else %},{% endif %}
+  {% endfor %} { opacity: 1; }
+</style>

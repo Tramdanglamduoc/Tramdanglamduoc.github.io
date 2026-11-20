@@ -8,7 +8,7 @@ Most content lives in `_data/`, so updates rarely need HTML:
 
 | File | What it holds |
 |---|---|
-| `_data/stations.yml` | Lab platforms on the homepage and the navbar tabs (same list, same order) |
+| `_data/stations.yml` | Lab stations on the homepage and the navbar tabs (same list, same order) |
 | `_data/now.yml` | "Now" section on the homepage |
 | `_data/news.yml` | Recent news, newest first (homepage shows five) |
 | `_data/projects.yml` | Project cards: problem → method → result |
@@ -18,6 +18,10 @@ Most content lives in `_data/`, so updates rarely need HTML:
 Pages: `index.html`, `about.html` (journey map), `projects.html`, `publications.html`, `talks.html`, `open-science.html`, `contact.html`.
 
 Set `booking_url` and `cv` in `_config.yml` when they're ready.
+
+## Lab glow layers
+
+`assets/img/lab/*.webp` are the objects that light up on hover. They were cut from the vector (EPS) illustration, and their positions in `_data/stations.yml` match those files, so regenerate both together if the artwork changes.
 
 ## Run locally
 
